@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import DropdownMSS from './components/DropdownMenu'
-import Plot from './components/Ploter'
+import DropdownMSS from './components/DropdownMenu';
+
 
 
 function App() {
@@ -16,9 +16,8 @@ function App() {
       <div>
       <DropdownMSS />
       </div>
-      <div>
-        <Plot/>
-      </div>
+      
+
       
     </div>
   );
