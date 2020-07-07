@@ -1,24 +1,24 @@
 import React, {Component} from 'react';
 import { Scatter } from 'react-chartjs-2';
-import {data} from '../data_ex'
+import {covid_data_ww} from '../covid_data_ww'
 
 
 
-const datalabel = Object.keys(data).map( (country) => ({
+const datalabel = Object.keys(covid_data_ww).map( (country) => ({
   key: country,
   text: country,
   value: country,
 }))
 
-const dataval = Object.values(data).map( row => ({
-  "x": row["date"], "y": row["wage"],
+const dataval = Object.values(covid_data_ww).map( row => ({
+  "x": row["Tasa_Incid"], "y": row["r(t)_casos"],
 }))
 
 const data_config = {
   labels: ['Scatter'],
   datasets: [
     {
-      label: datalabel,
+      label: datalabel[0],
       fill: false,
       showLine: true,  
       backgroundColor: 'rgba(75,192,192,0.4)',
@@ -32,15 +32,6 @@ const data_config = {
       pointRadius: 4,
       pointHitRadius: 10,
       data:  dataval
-      /*[
-        { x: 65, y: 75 },
-        { x: 59, y: 49 },
-        { x: 80, y: 90 },
-        { x: 81, y: 29 },
-        { x: 56, y: 36 },
-        { x: 55, y: 25 },
-        { x: 40, y: 18 },
-      ]*/
     }
   ]
 };
