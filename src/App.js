@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DropdownMSS from './components/DropdownMenu';
 import ScatterPlot from './components/scatter.js';
-import { covid_data_ww } from "./covid_data_ww";
+import { data_ex } from "./data_ex";
 
 
 //export default class App extends React.Component {
@@ -20,7 +20,7 @@ function App() {
       <DropdownMSS />
       <hr />
       </div>
-      <ScatterPlot data={covid_data_ww} /> 
+      <ScatterPlot data={data_ex} /> 
 			<hr />
 
     </div>

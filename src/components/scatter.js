@@ -34,7 +34,7 @@ export default class ScatterPlot extends Component {
   render() {
     return (
       <div>
-        <h2>Line Example</h2>
+        <h2>Espacio-Fase de Incidencias</h2>
         <Scatter ref="chart" data={data_config} />
       </div>
     );
