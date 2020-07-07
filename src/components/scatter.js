@@ -1,11 +1,24 @@
 import React, {Component} from 'react';
 import { Scatter } from 'react-chartjs-2';
+import {data} from '../data_ex'
+
+
+
+const datalabel = Object.keys(data).map( (country) => ({
+  key: country,
+  text: country,
+  value: country,
+}))
+
+const dataval = Object.values(data).map( row => ({
+  "x": row["date"], "y": row["wage"],
+}))
 
 const data_config = {
   labels: ['Scatter'],
   datasets: [
     {
-      label: 'Country dataset',
+      label: datalabel,
       fill: false,
       backgroundColor: 'rgba(75,192,192,0.4)',
       pointBorderColor: 'rgba(75,192,192,1)',
@@ -17,7 +30,8 @@ const data_config = {
       pointHoverBorderWidth: 5,
       pointRadius: 4,
       pointHitRadius: 10,
-      data: [
+      data:  dataval
+      /*[
         { x: 65, y: 75 },
         { x: 59, y: 49 },
         { x: 80, y: 90 },
@@ -25,7 +39,7 @@ const data_config = {
         { x: 56, y: 36 },
         { x: 55, y: 25 },
         { x: 40, y: 18 },
-      ]
+      ]*/
     }
   ]
 };

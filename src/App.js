@@ -3,12 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import DropdownMSS from './components/DropdownMenu';
 import ScatterPlot from './components/scatter.js';
-import { data_ex } from "./data_ex";
+
+
 
 
 //export default class App extends React.Component {
-function App() {
-  
+
+  export default function App() {
   return (
     <div>
       <header className="App-header">
@@ -20,11 +21,9 @@ function App() {
       <DropdownMSS />
       <hr />
       </div>
-      <ScatterPlot data={data_ex} /> 
+      <ScatterPlot /> 
 			<hr />
 
     </div>
   );
   }
-
-export default App;
