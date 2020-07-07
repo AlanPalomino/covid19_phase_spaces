@@ -20,6 +20,7 @@ const data_config = {
     {
       label: datalabel,
       fill: false,
+      showLine: true,  
       backgroundColor: 'rgba(75,192,192,0.4)',
       pointBorderColor: 'rgba(75,192,192,1)',
       pointBackgroundColor: '#fff',
