@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Scatter } from 'react-chartjs-2';
 
-const data = {
+const data_config = {
   labels: ['Scatter'],
   datasets: [
     {
@@ -35,7 +35,7 @@ export default class ScatterPlot extends Component {
     return (
       <div>
         <h2>Line Example</h2>
-        <Scatter ref="chart" data={data} />
+        <Scatter ref="chart" data={data_config} />
       </div>
     );
   }
