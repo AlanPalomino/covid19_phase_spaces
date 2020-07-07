@@ -2,13 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import DropdownMSS from './components/DropdownMenu';
-import ScatterExample from './components/scatter.js';
-import { covid_data_ww } from "./covid_data_ww";
+import ScatterPlot from './components/scatter.js';
+//import { covid_data_ww } from "./covid_data_ww";
 
 
-export default class App extends React.Component {
-//function App() {
-  render(){
+//export default class App extends React.Component {
+function App() {
+  
   return (
     <div>
       <header className="App-header">
@@ -20,12 +20,11 @@ export default class App extends React.Component {
       <DropdownMSS />
       <hr />
       </div>
-      
-				<ScatterExample data={covid_data_ww}/> 
+      <ScatterPlot/> 
 			<hr />
 
     </div>
   );
   }
-}
-//export default App;
+
+export default App;

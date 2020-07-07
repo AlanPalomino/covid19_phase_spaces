@@ -1,11 +1,11 @@
-import React from 'react';
-import {Scatter} from 'react-chartjs-2';
+import React, {Component} from 'react';
+import { Scatter } from 'react-chartjs-2';
 
 const data = {
   labels: ['Scatter'],
   datasets: [
     {
-      label: 'Some Dataset',
+      label: 'Country dataset',
       fill: false,
       backgroundColor: 'rgba(75,192,192,0.4)',
       pointBorderColor: 'rgba(75,192,192,1)',
@@ -30,16 +30,18 @@ const data = {
   ]
 };
 
-
-export default React.createClass({
-  displayName: 'ScatterExample',
-
+export default class ScatterPlot extends Component {
   render() {
     return (
       <div>
-        <h2>Scatter Example</h2>
-        <Scatter data={data} />
+        <h2>Line Example</h2>
+        <Scatter ref="chart" data={data} />
       </div>
     );
   }
-});
+
+  componentDidMount() {
+    const { datasets } = this.refs.chart.chartInstance.data
+    console.log(datasets[0].data);
+  }
+}
